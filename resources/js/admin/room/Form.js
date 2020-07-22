@@ -9,8 +9,8 @@ Vue.component('room-form', {
                 perex:  '' ,
                 published_at:  '' ,
                 enabled:  false ,
-                
-            }
+            },
+            mediaCollections: ['gallery']
         }
     }
 

@@ -9,8 +9,8 @@ Vue.component('facility-form', {
                 perex:  '' ,
                 published_at:  '' ,
                 enabled:  false ,
-                
-            }
+            },
+            mediaCollections: ['gallery']
         }
     }
 

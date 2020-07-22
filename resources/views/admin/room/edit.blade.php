@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="col-md-12 col-lg-12 col-xl-5 col-xxl-4">
-                            @include('admin.room.components.form-elements-right', ['showHistory' => true])
+                            @include('admin.room.components.edit-form-elements-right', ['showHistory' => true])
                         </div>
                     </div>
                     

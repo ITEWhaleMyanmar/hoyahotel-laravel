@@ -49,10 +49,10 @@
                                             </label>
                                         </th>
 
-                                        <th is='sortable' :column="'id'">{{ trans('admin.post.columns.id') }}</th>
-                                        <th is='sortable' :column="'title'">{{ trans('admin.post.columns.title') }}</th>
-                                        <th is='sortable' :column="'published_at'">{{ trans('admin.post.columns.published_at') }}</th>
-                                        <th is='sortable' :column="'enabled'">{{ trans('admin.post.columns.enabled') }}</th>
+                                        <th is='sortable' :column="'id'"> Id </th>
+                                        <th is='sortable' :column="'title'"> Title </th>
+                                        <th is='sortable' :column="'published_at'"> published_at </th>
+                                        <th is='sortable' :column="'enabled'"> Enabled</th>
 
                                         <th></th>
                                     </tr>

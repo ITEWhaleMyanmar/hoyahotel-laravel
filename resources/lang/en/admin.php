@@ -179,5 +179,23 @@ return [
         ],
     ],
 
+    'contact-u' => [
+        'title' => 'Contact Us',
+
+        'actions' => [
+            'index' => 'Contact Us',
+            'create' => 'New Contact U',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'email' => 'Email',
+            'phone' => 'Phone',
+            'address' => 'Address',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

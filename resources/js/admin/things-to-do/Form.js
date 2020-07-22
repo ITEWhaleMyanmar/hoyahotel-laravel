@@ -10,7 +10,8 @@ Vue.component('things-to-do-form', {
                 published_at:  '' ,
                 enabled:  false ,
                 
-            }
+            },
+            mediaCollections: ['gallery']
         }
     }
 
