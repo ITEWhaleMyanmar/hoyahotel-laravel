@@ -45,7 +45,9 @@ class ThingsToDo extends Model implements HasMedia
 
     public function registerMediaConversions(Media $media = null)
     {
-        $this->autoRegisterThumb200();
+        $this->addMediaConversion('thumb')
+              ->width(690)
+              ->height(690);
     }
 
     public function registerMediaCollections() {
