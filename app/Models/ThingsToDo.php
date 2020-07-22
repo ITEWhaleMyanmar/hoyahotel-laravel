@@ -3,17 +3,27 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Brackets\Media\HasMedia\ProcessMediaTrait;
+use Brackets\Media\HasMedia\AutoProcessMediaTrait;
+use Brackets\Media\HasMedia\HasMediaCollectionsTrait;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Brackets\Media\HasMedia\HasMediaThumbsTrait;
+use Spatie\MediaLibrary\Models\Media;
 
-class ThingsToDo extends Model
+class ThingsToDo extends Model implements HasMedia
 {
+    use ProcessMediaTrait;
+    use AutoProcessMediaTrait;
+    use HasMediaCollectionsTrait;
+    use HasMediaThumbsTrait;
+   
     protected $table = 'things_to_do';
-
+  
     protected $fillable = [
         'title',
         'perex',
         'published_at',
         'enabled',
-    
     ];
     
     
@@ -21,8 +31,8 @@ class ThingsToDo extends Model
         'published_at',
         'created_at',
         'updated_at',
-    
     ];
+    
     
     protected $appends = ['resource_url'];
 
@@ -32,4 +42,14 @@ class ThingsToDo extends Model
     {
         return url('/admin/things-to-dos/'.$this->getKey());
     }
+
+    public function registerMediaConversions(Media $media = null)
+    {
+        $this->autoRegisterThumb200();
+    }
+
+    public function registerMediaCollections() {
+        $this->addMediaCollection('gallery');
+    }
+   
 }

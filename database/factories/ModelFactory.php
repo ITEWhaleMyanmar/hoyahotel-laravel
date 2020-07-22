@@ -110,3 +110,15 @@ $factory->define(App\Models\CurrentSpecialOffer::class, static function (Faker\G
         
     ];
 });
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\ContactU::class, static function (Faker\Generator $faker) {
+    return [
+        'email' => $faker->email,
+        'phone' => $faker->sentence,
+        'address' => $faker->text(),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});

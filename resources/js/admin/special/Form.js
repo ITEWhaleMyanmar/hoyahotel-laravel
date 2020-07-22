@@ -10,7 +10,8 @@ Vue.component('special-form', {
                 published_at:  '' ,
                 enabled:  false ,
                 
-            }
+            },
+            mediaCollections: ['gallery']
         }
     }
 

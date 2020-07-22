@@ -8,7 +8,8 @@
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/dinings') }}"><i class="nav-icon icon-umbrella"></i> {{ trans('admin.dining.title') }}</a></li>
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/facilities') }}"><i class="nav-icon icon-graduation"></i> {{ trans('admin.facility.title') }}</a></li>
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/rooms') }}"><i class="nav-icon icon-umbrella"></i> {{ trans('admin.room.title') }}</a></li>
-           <li class="nav-item"><a class="nav-link" href="{{ url('admin/current-special-offers') }}"><i class="nav-icon icon-drop"></i> {{ trans('admin.current-special-offer.title') }}</a></li>
+           <!-- <li class="nav-item"><a class="nav-link" href="{{ url('admin/current-special-offers') }}"><i class="nav-icon icon-drop"></i> {{ trans('admin.current-special-offer.title') }}</a></li> -->
+           <li class="nav-item"><a class="nav-link" href="{{ url('admin/contact-us') }}"><i class="nav-icon icon-flag"></i> {{ trans('admin.contact-u.title') }}</a></li>
            {{-- Do not delete me :) I'm used for auto-generation menu items --}}
 
             <li class="nav-title">{{ trans('brackets/admin-ui::admin.sidebar.settings') }}</li>

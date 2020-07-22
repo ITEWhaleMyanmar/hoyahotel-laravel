@@ -17,4 +17,10 @@
     </div>
 </div>
 
+@include('brackets/admin-ui::admin.includes.media-uploader', [
+    'mediaCollection' => app(App\Models\ThingsToDo::class)->getMediaCollection('gallery'),
+    'label' => 'Thingstodo Image'
+])
+
+
 

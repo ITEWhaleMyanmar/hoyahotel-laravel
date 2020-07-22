@@ -116378,6 +116378,65 @@ if (token) {
 
 /***/ }),
 
+/***/ "./resources/js/admin/contact-u/Form.js":
+/*!**********************************************!*\
+  !*** ./resources/js/admin/contact-u/Form.js ***!
+  \**********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app_components_Form_AppForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app-components/Form/AppForm */ "./resources/js/admin/app-components/Form/AppForm.js");
+
+Vue.component('contact-u-form', {
+  mixins: [_app_components_Form_AppForm__WEBPACK_IMPORTED_MODULE_0__["default"]],
+  data: function data() {
+    return {
+      form: {
+        email: '',
+        phone: '',
+        address: ''
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/admin/contact-u/Listing.js":
+/*!*************************************************!*\
+  !*** ./resources/js/admin/contact-u/Listing.js ***!
+  \*************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app_components_Listing_AppListing__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app-components/Listing/AppListing */ "./resources/js/admin/app-components/Listing/AppListing.js");
+
+Vue.component('contact-u-listing', {
+  mixins: [_app_components_Listing_AppListing__WEBPACK_IMPORTED_MODULE_0__["default"]]
+});
+
+/***/ }),
+
+/***/ "./resources/js/admin/contact-u/index.js":
+/*!***********************************************!*\
+  !*** ./resources/js/admin/contact-u/index.js ***!
+  \***********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Listing__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Listing */ "./resources/js/admin/contact-u/Listing.js");
+/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Form */ "./resources/js/admin/contact-u/Form.js");
+
+
+
+/***/ }),
+
 /***/ "./resources/js/admin/current-special-offer/Form.js":
 /*!**********************************************************!*\
   !*** ./resources/js/admin/current-special-offer/Form.js ***!
@@ -116389,11 +116448,17 @@ if (token) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_components_Form_AppForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app-components/Form/AppForm */ "./resources/js/admin/app-components/Form/AppForm.js");
 
-Vue.component('current-special-offer-form', {
+Vue.component('dining-form', {
   mixins: [_app_components_Form_AppForm__WEBPACK_IMPORTED_MODULE_0__["default"]],
   data: function data() {
     return {
-      form: {}
+      form: {
+        title: '',
+        perex: '',
+        published_at: '',
+        enabled: false
+      },
+      mediaCollections: ['gallery']
     };
   }
 });
@@ -116453,7 +116518,8 @@ Vue.component('dining-form', {
         perex: '',
         published_at: '',
         enabled: false
-      }
+      },
+      mediaCollections: ['gallery']
     };
   }
 });
@@ -116513,7 +116579,8 @@ Vue.component('facility-form', {
         perex: '',
         published_at: '',
         enabled: false
-      }
+      },
+      mediaCollections: ['gallery']
     };
   }
 });
@@ -116572,6 +116639,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _facility__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./facility */ "./resources/js/admin/facility/index.js");
 /* harmony import */ var _room__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./room */ "./resources/js/admin/room/index.js");
 /* harmony import */ var _current_special_offer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./current-special-offer */ "./resources/js/admin/current-special-offer/index.js");
+/* harmony import */ var _contact_u__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./contact-u */ "./resources/js/admin/contact-u/index.js");
+
 
 
 
@@ -116763,7 +116832,8 @@ Vue.component('room-form', {
         perex: '',
         published_at: '',
         enabled: false
-      }
+      },
+      mediaCollections: ['gallery']
     };
   }
 });
@@ -116823,7 +116893,8 @@ Vue.component('special-form', {
         perex: '',
         published_at: '',
         enabled: false
-      }
+      },
+      mediaCollections: ['gallery']
     };
   }
 });
@@ -116883,7 +116954,8 @@ Vue.component('things-to-do-form', {
         perex: '',
         published_at: '',
         enabled: false
-      }
+      },
+      mediaCollections: ['gallery']
     };
   }
 });
@@ -116930,7 +117002,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/kyawwaiyanlin/Downloads/hoyahotel-laravel/resources/js/admin/admin.js */"./resources/js/admin/admin.js");
+module.exports = __webpack_require__(/*! /Users/kyawwaiyanlin/Documents/hoyahotel-laravel/resources/js/admin/admin.js */"./resources/js/admin/admin.js");
 
 
 /***/ })

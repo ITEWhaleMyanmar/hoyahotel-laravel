@@ -182,3 +182,17 @@ Route::get('/voucher', 'PageController@voucher');
 Route::get('/things-to-do', 'PageController@things');
 Route::get('/reserve', 'PageController@reserve');
 Route::get('/contact-us', 'PageController@contact');
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('Admin')->name('admin/')->group(static function() {
+        Route::prefix('contact-us')->name('contact-us/')->group(static function() {
+            Route::get('/',                                             'ContactUsController@index')->name('index');
+            Route::get('/create',                                       'ContactUsController@create')->name('create');
+            Route::post('/',                                            'ContactUsController@store')->name('store');
+            Route::get('/{contactU}/edit',                              'ContactUsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'ContactUsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{contactU}',                                  'ContactUsController@update')->name('update');
+            Route::delete('/{contactU}',                                'ContactUsController@destroy')->name('destroy');
+        });
+    });
+});

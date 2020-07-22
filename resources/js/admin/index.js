@@ -8,3 +8,4 @@ import './dining';
 import './facility';
 import './room';
 import './current-special-offer';
+import './contact-u';

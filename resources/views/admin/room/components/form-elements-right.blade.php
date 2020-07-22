@@ -17,4 +17,10 @@
     </div>
 </div>
 
+@include('brackets/admin-ui::admin.includes.media-uploader', [
+    'mediaCollection' => app(App\Models\Room::class)->getMediaCollection('gallery'),
+    'label' => 'Room Image'
+])
+
+
 
