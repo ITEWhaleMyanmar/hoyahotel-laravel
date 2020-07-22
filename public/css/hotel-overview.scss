@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.jomolhari {
+  font-family: "Jomolhari", sans-serif;
+}
+
+.underline-text {
+  font-weight: 300;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.underline-text:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+  border-bottom: 2px solid black;
+}
+
+.content {
+  padding-top: 7vh;
+}
+
+.dropdown-menu {
+  background-color: white;
+}
+
+.dropdown-list a {
+  color: black;
+}
+
+.title-text {
+  padding-top: 20vh;
+}
+
+@media(max-width: 768px) {
+  .content {
+    padding-top: 9.25vh;
+  }
+}

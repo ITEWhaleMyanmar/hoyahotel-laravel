@@ -1,0 +1,59 @@
+.footer {
+  min-height: 80vh;
+  background-color: rgba(0, 0, 0, 0.979);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.footer-header {
+  color: White;
+}
+
+.footer-inner {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer-row {
+  padding-top: 20vh;
+}
+
+.footer-address-list li {
+  cursor: pointer;
+}
+
+.footer-links {
+  color: #5e5f5f;
+}
+
+.footer-links:hover {
+  color: #f39838;
+  transition: 0.3s ease;
+}
+
+.footer-links li:hover {
+  color: white;
+}
+
+.credit-text {
+  color: #f39838;
+}
+
+.icons a:hover {
+  color: #f39838 !important;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 991px) {
+  .hr-row {
+    display: none;
+  }
+}
