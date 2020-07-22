@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 /* Auto-generated admin routes */
@@ -161,3 +161,24 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         });
     });
 });
+
+
+Route::get('/', 'PageController@indexPage');
+Route::get('/hotel-overview', 'PageController@overview');
+Route::get('/superior-room', 'PageController@superior');
+Route::get('/deluxe-room', 'PageController@deluxe');
+Route::get('/premier-room', 'PageController@premier');
+Route::get('/executive-deluxe', 'PageController@executive');
+Route::get('/executive-business', 'PageController@business');
+Route::get('/hoya-suite', 'PageController@suite');
+Route::get('/business-center', 'PageController@businessCenter');
+Route::get('/shopping-complex', 'PageController@shoppingComplex');
+Route::get('/o-lounge', 'PageController@olounge');
+Route::get('/seafood', 'PageController@seafood');
+Route::get('/breakfast', 'PageController@breakfast');
+Route::get('/happy-hour', 'PageController@happyhour');
+Route::get('/booking', 'PageController@booking');
+Route::get('/voucher', 'PageController@voucher');
+Route::get('/things-to-do', 'PageController@things');
+Route::get('/reserve', 'PageController@reserve');
+Route::get('/contact-us', 'PageController@contact');

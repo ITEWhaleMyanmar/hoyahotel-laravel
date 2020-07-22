@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.jomolhari {
+  font-family: "Jomolhari", sans-serif;
+}
+
+.underline-text::after {
+  content: "";
+  height: 2px;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: -.5em;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.content {
+  padding-top:100px;
+}
+
+.tripadvisor {
+  width: 200px;
+  height: 100px;
+}
+
+
+.special-offer-body {
+  border-bottom: 1px solid black;
+}
+
+@media(max-width: 768px) {
+  .content {
+    padding-top: 125px;
+  }
+}
