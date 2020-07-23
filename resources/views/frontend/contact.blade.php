@@ -1,5 +1,6 @@
 @extends('frontend.layout.app')
 @section('content')
+
 <div class="content">
     <div class="content-inner">
         <div class="container">
@@ -13,21 +14,21 @@
                     <div class="card card-body h-100">
                         <i class="fas fa-map-marker-alt fa-2x"></i>
                         <h4 class="py-2">Address</h4>
-                        <p>Insein Rd. Hlaing Township, Yangon, Myanmar</p>
+                         {{ $data[0]->address }}
                     </div>
                 </div>
                 <div class="col-md-4 text-center info-cards">
                     <div class="card card-body h-100">
                         <i class="fas fa-envelope fa-2x"></i>
                         <h4 class="py-2">Email</h4>
-                        <p>hoya@info.com</p>
+                        <p>{{$data[0]->email}}</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center info-cards">
                     <div class="card card-body h-100">
                         <i class="fas fa-phone fa-2x"></i>
                         <h4 class="py-2">Phone</h4>
-                        <p>+95 09 1234456789</p>
+                        <p>{{ $data[0]->phone}}</p>
                     </div>
                 </div>
             </div>

@@ -8,6 +8,7 @@ use Brackets\Media\HasMedia\AutoProcessMediaTrait;
 use Brackets\Media\HasMedia\HasMediaCollectionsTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Brackets\Media\HasMedia\HasMediaThumbsTrait;
+
 use Spatie\MediaLibrary\Models\Media;
 
 class ThingsToDo extends Model implements HasMedia
@@ -45,7 +46,7 @@ class ThingsToDo extends Model implements HasMedia
 
     public function registerMediaConversions(Media $media = null)
     {
-        $this->addMediaConversion('thumb')
+        $this->addMediaConversion('square')
               ->width(690)
               ->height(690);
     }

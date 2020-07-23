@@ -5,7 +5,7 @@
         <div class="row pb-5 pt-5">
 
             <div class="col-md-12">
-                <img src="images/seafood-restaurant.jpg" alt=" Four Season Seafood Restaurant" class="img-fluid">
+                <img src="media/{{ $data[1]->media[0]->id . '/' .$data[1]->media[0]->file_name}}" alt=" Four Season Seafood Restaurant" class="img-fluid">
             </div>
         </div>
         <div class="row content-row">
@@ -13,23 +13,20 @@
                 <ul class="list-group">
                     <div class="list-group-item">
                         <ul class="list-unstyled">
-                            <li class="page-link border-0"><a href="dining-o.php" class="text-dark">O Lounge</a></li>
+                            <li class="page-link border-0"><a href="{{  url('o-lounge') }}" class="text-dark">{{$data[0]->title}}</a></li>
                             <hr>
-                            <li class="page-link border-0 link-active"><a href="dining-four.php" class="text-white">Four Seasons Seafood
-                                    Restaurant</a></li>
+                            <li class="page-link border-0 link-active"><a href="{{ url('seafood') }}" class="text-white">{{$data[1]->title}}</a></li>
                         </ul>
                     </div>
                 </ul>
             </div>
             <div class="col-md-9 content-col">
-                <h3 class="font-weight-bold">Four Season Sea Food Restaurant</h3>
+                <h3 class="font-weight-bold">{{$data[1]->title}}</h3>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugiat velit magni, totam quos
-                    beatae quidem, eveniet laudantium aperiam earum consequatur dolorum minus sunt sapiente maxime
-                    cumque? Quod, dolorem dolores.</p>
-                <p><span class="font-weight-bold">Opening Hours: </span>Monday to Sunday, 07:00 – 23:30.</p>
+                <p>{{ $data[1]->perex }}</p>
+                <!-- <p><span class="font-weight-bold">Opening Hours: </span>Monday to Sunday, 07:00 – 23:30.</p>
                 <p>For reservation, please call +95 09 0000000 or email <span
-                        class="text-black-50">reservation@example.com</span></p>
+                        class="text-black-50">reservation@example.com</span></p> -->
             </div>
         </div>
     </div>

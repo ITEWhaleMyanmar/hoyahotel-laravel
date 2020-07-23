@@ -52,6 +52,11 @@ class Dining extends Model implements HasMedia
     }
 
     public function registerMediaCollections() {
-        $this->addMediaCollection('gallery');
+       $this->addMediaCollection('gallery');
+        // $fileAdders = $dining
+        // ->addMultipleMediaFromRequest(['images'])
+        // ->each(function ($fileAdder) {
+        //     $fileAdder->toMediaCollection('gallery');
+        // });
     }
 }

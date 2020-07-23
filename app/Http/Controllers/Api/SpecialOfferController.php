@@ -32,6 +32,7 @@ class SpecialOfferController extends Controller
  
     public function special_offer()
     {
+       
         $special_offer = Post::with('media')->get();
         return response()->json($special_offer);
     }

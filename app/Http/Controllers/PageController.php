@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Route;
 
 class PageController extends Controller
 {
@@ -49,35 +50,51 @@ class PageController extends Controller
     }
     public function olounge()
     {
-        return view('frontend.dining.olounge');
+        $request = Request::create('/api/dining', 'GET');
+        $olounge = json_decode(Route::dispatch($request)->getContent());
+        return view('frontend.dining.olounge',['data' => $olounge]);
     }
     public function seafood()
     {
-        return view('frontend.dining.seafood');
+        $request = Request::create('/api/dining', 'GET');
+        $seafood = json_decode(Route::dispatch($request)->getContent());
+        return view('frontend.dining.seafood',['data' => $seafood]);
     }
     public function breakfast()
     {
-        return view('frontend.special.breakfast');
+        $request = Request::create('/api/special', 'GET');
+        $special = json_decode(Route::dispatch($request)->getContent());
+        return view('frontend.special.breakfast',['data' => $special]);
     }
     public function happyHour()
     {
-        return view('frontend.special.happyhour');
+        $request = Request::create('/api/special', 'GET');
+        $special = json_decode(Route::dispatch($request)->getContent());
+        return view('frontend.special.happyhour',['data' => $special]);
     }
     public function booking()
     {
-        return view('frontend.special.booking');
+        $request = Request::create('/api/special', 'GET');
+        $special = json_decode(Route::dispatch($request)->getContent());
+        return view('frontend.special.booking',['data' => $special]);
     }
     public function voucher()
     {
-        return view('frontend.special.voucher');
+        $request = Request::create('/api/special', 'GET');
+        $special = json_decode(Route::dispatch($request)->getContent());
+        return view('frontend.special.voucher',['data' => $special]);
     }
     public function things()
     {
-        return view('frontend.things');
+        $request = Request::create('/api/thingstodo', 'GET');
+        $thingstodo = json_decode(Route::dispatch($request)->getContent());
+        return view('frontend.things',['data' => $thingstodo]);
     }
     public function contact()
     {
-        return view('frontend.contact');
+        $request = Request::create('/api/contactus', 'GET');
+        $contactus = json_decode(Route::dispatch($request)->getContent());
+        return view('frontend.contact',['data' => $contactus]);
     }
     public function reserve()
     {
